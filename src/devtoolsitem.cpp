@@ -66,8 +66,8 @@ ConfigFileHelper::ConfigFileHelper(QObject *parent)
             doc.setArray(initArray);
             auto bytes = doc.toJson();
             file.write(bytes);
-            file.close();
         }
+        file.close();
     }
     m_fileWatcher->addPath(CONFIG_PATH);
     connect(m_fileWatcher, &QFileSystemWatcher::fileChanged, this, &ConfigFileHelper::onFileChanged);
