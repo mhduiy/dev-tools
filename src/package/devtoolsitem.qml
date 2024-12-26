@@ -45,9 +45,10 @@ AppletItem {
         scale: Panel.rootObject.dockItemMaxSize * 9 / 14 / Dock.MAX_DOCK_TASKMANAGER_ICON_SIZE
         sourceSize: Qt.size(Dock.MAX_DOCK_TASKMANAGER_ICON_SIZE, Dock.MAX_DOCK_TASKMANAGER_ICON_SIZE)
 
-        TapHandler {
+        MouseArea {
+            anchors.fill: parent
             acceptedButtons: Qt.LeftButton
-            onTapped: {
+            onClicked: {
                 panelPopup.open()
             }
         }
